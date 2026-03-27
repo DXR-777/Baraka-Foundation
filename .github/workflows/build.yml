@@ -1,26 +1,23 @@
-name: Baraka Final Fix
+name: Baraka Super Fix
 on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: set up JDK 17
         uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
 
-      # هذه الخطوة هي "المنقذ": ستقوم بتحميل Gradle سليم وتجاهل ملفك اليدوي
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
-        with:
-          gradle-version: 8.2
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew || true
 
-      # بناء التطبيق باستخدام Gradle الرسمي مباشرة
-      - name: Build APK
-        run: gradle assembleDebug --stacktrace
+      - name: Build with Gradle
+        run: |
+          gradle clean assembleDebug --stacktrace
+        # استخدمنا gradle مباشرة لتخطي مشاكل الملفات اليدوية
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
