@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.baraka.foundation"> <application
+    package="com.baraka.foundation">
+
+    <application
         android:label="Baraka Foundation"
-        android:icon="@mipmap/ic_launcher"
-        android:allowBackup="true"
-        android:supportsRtl="true">
+        android:allowBackup="true">
         
         <activity
             android:name=".MainActivity"
@@ -15,4 +15,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
