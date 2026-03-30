@@ -10,7 +10,7 @@
     <application
         android:label="Baraka Foundation"
         android:allowBackup="true"
-        android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+        android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"
         
         <activity
             android:name=".MainActivity"
