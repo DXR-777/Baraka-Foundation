@@ -8,13 +8,7 @@ buildscript {
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
-
+// قمنا بحذف allprojects تماماً لمنع التعارض
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
