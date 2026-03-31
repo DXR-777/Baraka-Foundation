@@ -10,7 +10,7 @@
     <application
         android:label="Baraka Foundation"
         android:allowBackup="true"
-        android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"
+        android:theme="@style/Theme.BarakaFoundation">
         
         <activity
             android:name=".MainActivity"
@@ -21,4 +21,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
