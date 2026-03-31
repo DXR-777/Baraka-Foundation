@@ -1,12 +1,11 @@
-// ملف build.gradle الرئيسي
+// استبدل كل ما في الملف بهذا الكود
 buildscript {
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        // تحديث بسيط للنسخة لضمان التوافق مع JDK 17
-        classpath 'com.android.tools.build:gradle:8.2.2'
+        classpath 'com.android.tools.build:gradle:8.2.0'
     }
 }
 
@@ -17,7 +16,6 @@ allprojects {
     }
 }
 
-// إضافة سطر التنظيف (مهم جداً للـ GitHub Actions)
-tasks.register('clean', Delete) {
+task clean(type: Delete) {
     delete rootProject.buildDir
 }
