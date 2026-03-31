@@ -6,13 +6,11 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    // هذا السطر يحل مشكلة التعارض بين build.gradle و settings.gradle
     repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
         google()
         mavenCentral()
     }
 }
-
 rootProject.name = "Baraka Foundation"
 include ':app'
