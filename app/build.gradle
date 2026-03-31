@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace 'com.baraka.foundation' // هذا السطر إجباري في النسخ الحديثة
+    namespace 'com.baraka.foundation'
     compileSdk 34
 
     defaultConfig {
@@ -17,6 +17,12 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
     }
 }
 
