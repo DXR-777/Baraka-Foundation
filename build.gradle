@@ -8,7 +8,4 @@ buildscript {
     }
 }
 
-// قمنا بحذف allprojects تماماً لمنع التعارض
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
+// لا تضف أي شيء هنا، اتركها فارغة تماماً
