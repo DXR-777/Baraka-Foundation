@@ -1,11 +1,10 @@
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:8.2.0'
-    }
+// استبدل كل محتوى الملف بهذا الكود فقط
+plugins {
+    id 'com.android.application' version '8.2.0' apply false
+    id 'com.android.library' version '8.2.0' apply false
 }
 
-// لا تضف أي شيء هنا، اتركها فارغة تماماً
+// أضف هذه المهمة فقط للتنظيف
+tasks.register('clean', Delete) {
+    delete rootProject.buildDir
+}
