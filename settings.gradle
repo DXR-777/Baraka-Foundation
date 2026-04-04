@@ -1,3 +1,4 @@
+// ملف settings.gradle
 pluginManagement {
     repositories {
         google()
