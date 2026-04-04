@@ -1,3 +1,4 @@
+// ملف build.gradle الرئيسي
 buildscript {
     repositories {
         google()
@@ -8,4 +9,6 @@ buildscript {
     }
 }
 
-// ممنوع إضافة allprojects هنا نهائياً لتجنب التعارض مع settings.gradle
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
