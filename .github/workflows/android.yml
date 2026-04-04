@@ -1,5 +1,4 @@
 name: Android CI
-
 on:
   push:
     branches: [ "main" ]
@@ -7,7 +6,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v4
 
@@ -17,10 +15,11 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Setup Gradle
+    - name: Setup Gradle 8.5
       uses: gradle/actions/setup-gradle@v4
       with:
-        gradle-version: 8.5 # نسخة مستقرة جداً لعام 2026
+        gradle-version: 8.5
 
-    - name: Build with Gradle
-      run: gradle assembleDebug --stacktrace # الـ stacktrace سيخبرنا بالخطأ بالتفصيل لو فشل
+    - name: Build APK
+      # استخدام --no-daemon و --stacktrace لكشف أي خطأ خفي فوراً
+      run: gradle assembleDebug --no-daemon --stacktrace
